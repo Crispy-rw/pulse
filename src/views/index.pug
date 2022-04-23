@@ -1,0 +1,16 @@
+extends layout
+
+block layout-content
+  div.View
+    h1.Banner#Banner
+    div.Message
+      div.Title
+        h3 Making the Best
+        h1 Food For Devs
+      span.Details Access the WHATABYTE Team Portal
+    div.NavButtons
+      a(href="/user")
+          div.NavButton #{rss.title}
+    ul#display
+      each item in rss.items
+        li= item.title
